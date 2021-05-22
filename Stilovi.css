@@ -1,0 +1,598 @@
+*,
+*::after,
+*::before {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-size: inherit
+}
+
+:root {
+font-size: 62.5%;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: #212121;
+/* Font je 10 piksela */
+}
+
+ul {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+color: #212121;
+}
+
+.kontenjer {
+margin: 0 auto;
+width: 80%;
+}
+
+.kontenjer .navigacija img {
+height: 8rem;
+}
+
+.kontenjer .navigacija img:hover {
+cursor: pointer;
+transition: all .15s ease-in-out;
+transform: scale(1.05);
+}
+
+.navigacija {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 0;
+}
+
+.navigacijska-lista {
+display: flex;
+color: white;
+}
+
+.navigacijska-lista li {
+margin: 0 1rem;
+font-size: 2.2rem;
+padding: 0.5rem 1.5rem;
+border-bottom: 0.2rem transparent solid;
+}
+
+.navigacijska-lista li:hover {
+cursor: pointer;
+/* border-bottom: 0.2rem #8F3434 solid; */
+
+background-color: #8F3434;
+border-radius: 8px;
+transition: all .15s ease-in-out;
+transform: scale(1.05);
+}
+
+.navigacijska-lista a:hover,
+.navigacijska-lista a:visited:hover  {
+/* color:#8F3434; */
+color: white;
+}
+
+.navigacijska-lista a,
+.navigacijska-lista a:visited {
+color: white;
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1;
+}
+
+.naslovnica {
+width: 100%;
+height: 100vh;
+}
+
+.naslovnica-slike img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+.naslovnica-slike,
+.naslovnica-slike ul,
+.naslovnica-slike li {
+width: 100%;
+height: 100%;
+}
+
+.naslovnica-slike li {
+overflow: hidden;
+position: absolute;
+}
+
+.naslovnica-slike ul::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.crvena-traka {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 17vh;
+background-color: rgba(143, 52, 52, 0.803);
+
+color: white;
+font-size: 2.5rem;
+text-transform: uppercase;
+}
+
+.crvena-traka .kontenjer {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+
+}
+
+/* .crvena-traka div {
+flex: 1 1 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+font-size: 2.9rem;
+text-transform: uppercase;
+} */
+
+.slika-kontenjer {
+height: 7vh;
+width: auto;
+/* margin-bottom: 2rem; */
+}
+
+.slika-kontenjer img {
+object-fit: contain;
+}
+
+.crvena-traka .kontenjer > div {
+flex: 1 1 25%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+justify-content: space-between;
+
+height: 100%;
+padding: 3rem 0;
+}
+
+.broj-starost,
+.broj-povrsina,
+.broj-populacija {
+padding-top: 1.5rem;
+font-size: 3rem;
+font-weight: bold;
+}
+
+.broj-povrsina {
+padding-top: 0.5rem;
+}
+
+.naslovnica-slike li:first-child {
+animation: prvaNaslovna 12s ease-in-out 0s infinite;
+}
+
+.naslovnica-slike li:nth-child(2) {
+animation: drugaNaslovna 12s ease-in-out 0s infinite;
+}
+
+.naslovnica-slike li:last-child {
+animation: trecaNaslovna 12s ease-in-out 0s infinite;
+}
+
+@keyframes prvaNaslovna {
+0% {
+   opacity: 1;
+}
+
+33.33% {
+   opacity: 0;
+}
+
+99.99% {
+   opacity: 0;
+}
+}
+
+@keyframes drugaNaslovna {
+0% {
+   opacity: 0;
+}
+
+33.33% {
+   opacity: 1;
+}
+
+99.99% {
+   opacity: 0;
+}
+}
+
+@keyframes trecaNaslovna {
+0% {
+   opacity: 0;
+}
+
+33.33% {
+   opacity: 0;
+}
+
+99.99% {
+   opacity: 1;
+}
+}
+
+
+#opcenito {
+width: 100%;
+height: 100vh;
+background-color: #ccc;
+display: flex;
+}
+
+.opcenito-slike {
+flex: 1;
+object-fit: cover;
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+}
+
+.opcenito-slike img {
+object-fit: cover;
+object-position: left;
+height: 100%;
+}
+
+.opcenito-slike::after {
+content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(rgba(0, 0, 0, 0.398), 0.5);
+   z-index: 10;
+}
+
+.opcenito-kontenjer {
+flex: 1;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.opcenito-kontenjer h2 {
+font-size: 5rem;
+}
+
+.opcenito-kontenjer p {
+margin-top: 4rem;
+font-size: 3rem;
+max-width: 50ch;
+text-align: justify;
+letter-spacing: 2px;
+line-height: 1.5;
+}
+
+#povijest {
+height: 100vh;
+width: 100%;
+background-color: rgb(238, 238, 238);
+display: flex;
+}
+
+#povijest h2 {
+font-size: 5rem;
+}
+
+#povijest h3 {
+font-size: 3rem;
+}
+
+.povijest-opcenito {
+flex: 2;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.povijest-opcenito h2 {
+margin-bottom: 2rem;
+}
+.povijest-opcenito p {
+font-size: 2.5rem;
+line-height: 1.4;
+letter-spacing: 2px;
+max-width: 80ch;
+text-align: justify;
+margin-bottom: 3rem;
+}
+
+.povijest-zanimljivo {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.povijest-zanimljivo ul {
+list-style: disc;
+}
+
+.povijest-zanimljivo li{
+font-size: 2rem;
+margin: 2rem 0;
+font-weight: bold;
+}
+
+#lokacija {
+width: 100%;
+height: 100vh;
+display: flex;
+padding-top: 10vh;
+display: flex;
+}
+
+#lokacija h2 {
+font-size: 4rem;
+text-align: center;
+}
+
+.lokacija-zemljopis {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+position: relative;
+}
+
+.lokacija-zemljopis p {
+font-size: 2rem;
+line-height: 1.4;
+letter-spacing: 2px;
+max-width: 60ch;
+margin-top: 3rem;
+margin-bottom: 3rem;
+}
+
+.zemljopis-slike {
+position: absolute;
+bottom: 20vh;
+}
+
+.zemljopis-slike img,
+.lokacija-slike img{
+height: 30rem;
+margin: 1rem;
+}
+
+
+.lokacija-klima {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+position: relative;
+}
+
+.lokacija-slike {
+position: absolute;
+bottom: 20vh;
+}
+
+.lokacija-klima h2{
+margin-bottom: 3rem;
+}
+
+.lokacija-klima p {
+font-size: 2.5rem;
+line-height: 1.4;
+letter-spacing: 2px;
+max-width: 60ch;
+margin-bottom: 2rem;
+}
+
+.footer {
+width: 100%;
+height: 15vh;
+background-color:rgba(143, 52, 52, 0.803);
+color: white;
+font-size: 2rem;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.header {
+transition: top 0.5s ease-in-out;
+}
+
+/* KULTURA */
+#kultura {
+background-color:  #f4f7fc;
+font-size: 2.5rem;
+word-spacing: 5px;
+}
+
+#kultura h2 {
+padding-top: 5rem;
+font-size: 4rem;
+color: #727272;
+display: block;
+text-align: center;
+}
+
+.kultura-sadrzaj {
+padding: 5rem 0;
+}
+
+.kultura {
+display: grid;
+grid-template-columns: 2fr 3fr;
+gap: 5rem;
+}
+
+.kultura-slika,
+.sport-slika {
+overflow: hidden;
+}
+
+.kultura-slika img,
+.sport-slika img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.kultura-tekst,
+.sport-tekst {
+padding: 2rem 5rem 2rem 0;
+line-height: 1.7;
+text-align: justify;
+}
+
+.kultura-tekst p:not(:first-child),
+.sport-tekst p:not(:first-child) {
+margin-top: 2rem;
+}
+
+.sport {
+display: grid;
+grid-template-columns: 3fr 2fr;
+gap: 5rem;
+
+background-color: #333;
+color: white;
+}
+
+.sport-tekst {
+padding: 2rem 0 2rem 5rem;
+}
+
+/* GALERIJA */
+
+#galerija {
+background-color:  #f4f7fc;
+word-spacing: 5px;
+}
+
+#galerija h2 {
+padding-top: 5rem;
+font-size: 4rem;
+color: #727272;
+display: block;
+text-align: center;
+}
+
+.kontenjer-galerija {
+   padding: 5rem 0;
+
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5rem;
+}
+
+.kontenjer-slika {
+   overflow: hidden;
+   height: 50rem;
+   border-radius: 1rem;
+   box-shadow: 2px 4px 8px rgba(127, 127, 127, 0.2);
+   transition: all .2s ease-in-out;
+}
+
+.kontenjer-slika img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: all .2s ease-in-out;
+}
+
+.kontenjer-slika:hover {
+   box-shadow: 3px 6px 16px rgba(127, 127, 127, 0.3);
+   transform: scale(1.02);
+   cursor: pointer;
+   }
+
+.kontenjer-slika img:hover {
+   transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+   .kontenjer-galerija {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media screen and (max-width: 1850px) {
+:root {
+   font-size: calc(62.5% * .9);
+}
+
+.broj-starost,
+.broj-povrsina,
+.broj-populacija {
+   padding-top: 3rem;
+}
+
+.broj-povrsina {
+   padding-top: 1.7rem;
+}
+}
+
+@media screen and (max-width: 1650px) {
+:root {
+   font-size: calc(62.5% * .8);
+}
+
+.broj-starost,
+.broj-povrsina,
+.broj-populacija {
+   padding-top: 1.5rem;
+}
+
+.broj-povrsina {
+   padding-top: 0.2rem;
+}
+
+.crvena-traka {
+   height: 13vh;
+}
+
+.slika-kontenjer {
+   height: 4.5vh;
+}
+}
+
+@media screen and (max-width: 1450px) {
+:root {
+   font-size: calc(62.5% * .7);
+}
+}
+
+@media screen and (max-width: 800px) {
+.kontenjer {
+   width: 95%;
+}
+}

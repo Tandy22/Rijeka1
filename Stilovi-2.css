@@ -1,0 +1,119 @@
+.header {
+  transition: top 0.5s ease-in-out;
+}
+
+/* KULTURA */
+#kultura {
+  background-color:  #f4f7fc;
+  font-size: 2.5rem;
+  word-spacing: 5px;
+}
+
+#kultura h2 {
+  padding-top: 5rem;
+  font-size: 4rem;
+  color: #727272;
+  display: block;
+  text-align: center;
+}
+
+.kultura-sadrzaj {
+  padding: 5rem 0;
+}
+
+.kultura {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 5rem;
+}
+
+.kultura-slika,
+.sport-slika {
+  overflow: hidden;
+}
+
+.kultura-slika img,
+.sport-slika img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kultura-tekst,
+.sport-tekst {
+  padding: 2rem 5rem 2rem 0;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.kultura-tekst p:not(:first-child),
+.sport-tekst p:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.sport {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 5rem;
+
+  background-color: #333;
+  color: white;
+}
+
+.sport-tekst {
+  padding: 2rem 0 2rem 5rem;
+}
+
+/* GALERIJA */
+
+#galerija {
+  background-color:  #f4f7fc;
+  word-spacing: 5px;
+}
+
+#galerija h2 {
+  padding-top: 5rem;
+  font-size: 4rem;
+  color: #727272;
+  display: block;
+  text-align: center;
+}
+
+.kontenjer-galerija {
+  padding: 5rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.kontenjer-slika {
+  overflow: hidden;
+  height: 50rem;
+  border-radius: 1rem;
+  box-shadow: 2px 4px 8px rgba(127, 127, 127, 0.2);
+  transition: all .2s ease-in-out;
+}
+
+.kontenjer-slika img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .2s ease-in-out;
+}
+
+.kontenjer-slika:hover {
+  box-shadow: 3px 6px 16px rgba(127, 127, 127, 0.3);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.kontenjer-slika img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+  .kontenjer-galerija {
+    grid-template-columns: 1fr;
+  }
+}
